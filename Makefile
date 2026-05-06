@@ -36,14 +36,14 @@ docker-build: ## Build Docker image
 
 docker-compose-up: ## Start Docker Compose services
 	@echo "Starting Docker Compose services..."
-	docker-compose -f deployments/docker-compose.yml up -d
+	docker-compose -f deployments/docker-compose.yml --env-file .env up -d
 
 docker-compose-down: ## Stop Docker Compose services
 	@echo "Stopping Docker Compose services..."
-	docker-compose -f deployments/docker-compose.yml down
+	docker-compose -f deployments/docker-compose.yml --env-file .env down
 
 docker-compose-logs: ## View Docker Compose logs
-	docker-compose -f deployments/docker-compose.yml logs -f
+	docker-compose -f deployments/docker-compose.yml --env-file .env logs -f
 
 fmt: ## Format code
 	@echo "Formatting code..."
