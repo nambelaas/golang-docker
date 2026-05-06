@@ -53,10 +53,6 @@ vet: ## Run go vet
 	@echo "Running go vet..."
 	go vet ./...
 
-lint: ## Run golangci-lint (requires golangci-lint)
-	@command -v golangci-lint >/dev/null 2>&1 || go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-	golangci-lint run ./...
-
 deps: ## Download dependencies
 	@echo "Downloading dependencies..."
 	go mod download

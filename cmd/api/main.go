@@ -6,8 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/nambelaas/golang-docker/configs"
-	appinit "github.com/nambelaas/golang-docker/internal/init"
 	"github.com/nambelaas/golang-docker/internal/handler"
+	appinit "github.com/nambelaas/golang-docker/internal/init"
 	"github.com/nambelaas/golang-docker/internal/repository"
 )
 
